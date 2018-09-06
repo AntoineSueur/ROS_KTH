@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   geometry_msgs
+  ras_lab1_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -131,6 +132,8 @@ target_link_libraries(line_cartesian_controller ${catkin_LIBRARIES})
 add_executable(circle_cartesian_controller src/circle_cartesian_controller.cpp)
 target_link_libraries(circle_cartesian_controller ${catkin_LIBRARIES})
 
+add_executable(wall_following_controller src/wall_following_controller.cpp)
+target_link_libraries(wall_following_controller ${catkin_LIBRARIES})
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
